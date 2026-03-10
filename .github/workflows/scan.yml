@@ -1,0 +1,134 @@
+name: Security & Licence Scan
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:       # lets you trigger it manually from the GitHub UI
+
+jobs:
+  scan:
+    name: Semgrep + FOSSA
+    runs-on: ubuntu-latest
+
+    steps:
+      # ── 1. Checkout ────────────────────────────────────────────────────
+      - uses: actions/checkout@v4
+
+      # ── 2. Python + venv ───────────────────────────────────────────────
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Create venv and install dependencies
+        run: |
+          python -m venv venv
+          source venv/bin/activate
+          pip install --quiet semgrep pip-licenses
+          pip install --quiet -r requirements.txt
+
+      # ── 3. FOSSA CLI ───────────────────────────────────────────────────
+      - name: Install FOSSA CLI
+        run: |
+          curl -H 'Cache-Control: no-cache' \
+            https://raw.githubusercontent.com/fossas/fossa-cli/master/install-latest.sh \
+            | bash
+          # install-latest.sh drops the binary into the current dir or /usr/local/bin
+          # move it somewhere on PATH if needed
+          if [ -f ./fossa ]; then
+            sudo mv ./fossa /usr/local/bin/fossa
+          fi
+          fossa --version
+
+      # ── 4. FOSSA licence scan ──────────────────────────────────────────
+      - name: Run FOSSA (offline mode, no API key)
+        run: |
+          source venv/bin/activate
+          fossa analyze --output 2>/dev/null > fossa-results.json.raw || true
+          python3 - <<'EOF'
+          import sys, json, re
+          with open("fossa-results.json.raw") as f:
+              text = f.read()
+          clean = re.sub(r'\x1b\[[0-9;]*m', '', text)
+          start = min((clean.find(c) for c in ['{','['] if clean.find(c) != -1), default=-1)
+          if start == -1:
+              print("No JSON in FOSSA output — writing empty result")
+              open("fossa-results.json","w").write('{"projects":[]}')
+          else:
+              data = json.loads(clean[start:])
+              json.dump(data, open("fossa-results.json","w"), indent=2)
+              print("FOSSA JSON written")
+          EOF
+
+      # ── 5. Semgrep scan ────────────────────────────────────────────────
+      - name: Run Semgrep
+        run: |
+          source venv/bin/activate
+          semgrep scan \
+            --config p/python \
+            --config p/owasp-top-ten \
+            --config .semgrep.yml \
+            --json \
+            --output semgrep-results.json \
+            app.py || true
+          # semgrep exits 1 when findings exist; we handle pass/fail below
+
+      # ── 6. Parse + print combined report ──────────────────────────────
+      - name: Print compliance report
+        run: |
+          source venv/bin/activate
+          python3 parse_results.py
+
+      # ── 7. Upload result files as artifacts ───────────────────────────
+      - name: Upload scan artifacts
+        uses: actions/upload-artifact@v4
+        if: always()           # upload even if a previous step failed
+        with:
+          name: scan-results-${{ github.run_number }}
+          path: |
+            fossa-results.json
+            semgrep-results.json
+          retention-days: 30
+
+      # ── 8. Upload Semgrep results to GitHub Security tab (SARIF) ──────
+      - name: Re-run Semgrep as SARIF for Security tab
+        run: |
+          source venv/bin/activate
+          semgrep scan \
+            --config p/python \
+            --config p/owasp-top-ten \
+            --config .semgrep.yml \
+            --sarif \
+            --output semgrep.sarif \
+            app.py || true
+
+      - name: Upload SARIF to GitHub Security tab
+        uses: github/codeql-action/upload-sarif@v3
+        if: always()
+        with:
+          sarif_file: semgrep.sarif
+
+      # ── 9. Fail the build if Semgrep found ERROR-severity issues ──────
+      - name: Fail on ERROR findings
+        run: |
+          source venv/bin/activate
+          python3 - <<'EOF'
+          import json, sys
+          with open("semgrep-results.json") as f:
+              data = json.load(f)
+          errors = [
+              r for r in data.get("results", [])
+              if r.get("extra", {}).get("severity", "").upper() == "ERROR"
+          ]
+          if errors:
+              print(f"\n  BLOCKING: {len(errors)} ERROR-severity Semgrep finding(s).")
+              for r in errors:
+                  rule = r.get("check_id", "?")
+                  line = r.get("start", {}).get("line", "?")
+                  path = r.get("path", "?")
+                  print(f"    {path}:{line}  [{rule}]")
+              sys.exit(1)
+          else:
+              print("  No ERROR-severity findings — build passes.")
+          EOF

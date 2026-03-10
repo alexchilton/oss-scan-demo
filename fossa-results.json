@@ -1,0 +1,855 @@
+{
+  "projects": [
+    {
+      "graph": {
+        "assocs": [],
+        "deps": [],
+        "direct": []
+      },
+      "path": "/Users/alexchilton/PycharmProjects/security_testing/oss-scan-test/venv/lib/python3.12/site-packages/ruamel/yaml/clibz/",
+      "type": "setuptools"
+    },
+    {
+      "graph": {
+        "assocs": [
+          [
+            0,
+            [
+              1
+            ]
+          ],
+          [
+            4,
+            [
+              37
+            ]
+          ],
+          [
+            7,
+            [
+              5,
+              12,
+              13,
+              14,
+              15,
+              20,
+              31,
+              35,
+              37
+            ]
+          ],
+          [
+            9,
+            [
+              23
+            ]
+          ],
+          [
+            13,
+            [
+              12
+            ]
+          ],
+          [
+            14,
+            [
+              12
+            ]
+          ],
+          [
+            15,
+            [
+              12
+            ]
+          ],
+          [
+            16,
+            [
+              9
+            ]
+          ],
+          [
+            17,
+            [
+              0,
+              3,
+              6,
+              12,
+              19
+            ]
+          ],
+          [
+            20,
+            [
+              4,
+              21,
+              35,
+              37
+            ]
+          ],
+          [
+            22,
+            [
+              16
+            ]
+          ],
+          [
+            25,
+            [
+              27,
+              30,
+              33
+            ]
+          ],
+          [
+            27,
+            [
+              26,
+              28,
+              29,
+              30
+            ]
+          ],
+          [
+            28,
+            [
+              26
+            ]
+          ],
+          [
+            29,
+            [
+              26,
+              28,
+              30
+            ]
+          ],
+          [
+            30,
+            [
+              26,
+              28
+            ]
+          ],
+          [
+            31,
+            [
+              33
+            ]
+          ],
+          [
+            32,
+            [
+              8,
+              11,
+              18,
+              36
+            ]
+          ]
+        ],
+        "deps": [
+          {
+            "locations": [],
+            "name": "Jinja2",
+            "tags": {},
+            "type": "PipType",
+            "version": {
+              "type": "EQUAL",
+              "value": "3.1.6"
+            }
+          },
+          {
+            "locations": [],
+            "name": "MarkupSafe",
+            "tags": {},
+            "type": "PipType",
+            "version": {
+              "type": "EQUAL",
+              "value": "3.0.3"
+            }
+          },
+          {
+            "locations": [],
+            "name": "PyMySQL",
+            "tags": {},
+            "type": "PipType",
+            "version": {
+              "type": "EQUAL",
+              "value": "1.1.0"
+            }
+          },
+          {
+            "locations": [],
+            "name": "Werkzeug",
+            "tags": {},
+            "type": "PipType",
+            "version": {
+              "type": "EQUAL",
+              "value": "3.1.6"
+            }
+          },
+          {
+            "locations": [],
+            "name": "amqp",
+            "tags": {},
+            "type": "PipType",
+            "version": {
+              "type": "EQUAL",
+              "value": "5.3.1"
+            }
+          },
+          {
+            "locations": [],
+            "name": "billiard",
+            "tags": {},
+            "type": "PipType",
+            "version": {
+              "type": "EQUAL",
+              "value": "4.2.4"
+            }
+          },
+          {
+            "locations": [],
+            "name": "blinker",
+            "tags": {},
+            "type": "PipType",
+            "version": {
+              "type": "EQUAL",
+              "value": "1.9.0"
+            }
+          },
+          {
+            "locations": [],
+            "name": "celery",
+            "tags": {},
+            "type": "PipType",
+            "version": {
+              "type": "EQUAL",
+              "value": "5.3.4"
+            }
+          },
+          {
+            "locations": [],
+            "name": "certifi",
+            "tags": {},
+            "type": "PipType",
+            "version": {
+              "type": "EQUAL",
+              "value": "2026.2.25"
+            }
+          },
+          {
+            "locations": [],
+            "name": "cffi",
+            "tags": {},
+            "type": "PipType",
+            "version": {
+              "type": "EQUAL",
+              "value": "2.0.0"
+            }
+          },
+          {
+            "locations": [],
+            "name": "chardet",
+            "tags": {},
+            "type": "PipType",
+            "version": {
+              "type": "EQUAL",
+              "value": "5.2.0"
+            }
+          },
+          {
+            "locations": [],
+            "name": "charset-normalizer",
+            "tags": {},
+            "type": "PipType",
+            "version": {
+              "type": "EQUAL",
+              "value": "3.4.5"
+            }
+          },
+          {
+            "locations": [],
+            "name": "click",
+            "tags": {},
+            "type": "PipType",
+            "version": {
+              "type": "EQUAL",
+              "value": "8.1.8"
+            }
+          },
+          {
+            "locations": [],
+            "name": "click-didyoumean",
+            "tags": {},
+            "type": "PipType",
+            "version": {
+              "type": "EQUAL",
+              "value": "0.3.1"
+            }
+          },
+          {
+            "locations": [],
+            "name": "click-plugins",
+            "tags": {},
+            "type": "PipType",
+            "version": {
+              "type": "EQUAL",
+              "value": "1.1.1.2"
+            }
+          },
+          {
+            "locations": [],
+            "name": "click-repl",
+            "tags": {},
+            "type": "PipType",
+            "version": {
+              "type": "EQUAL",
+              "value": "0.3.0"
+            }
+          },
+          {
+            "locations": [],
+            "name": "cryptography",
+            "tags": {},
+            "type": "PipType",
+            "version": {
+              "type": "EQUAL",
+              "value": "41.0.7"
+            }
+          },
+          {
+            "locations": [],
+            "name": "flask",
+            "tags": {},
+            "type": "PipType",
+            "version": {
+              "type": "EQUAL",
+              "value": "3.0.0"
+            }
+          },
+          {
+            "locations": [],
+            "name": "idna",
+            "tags": {},
+            "type": "PipType",
+            "version": {
+              "type": "EQUAL",
+              "value": "3.11"
+            }
+          },
+          {
+            "locations": [],
+            "name": "itsdangerous",
+            "tags": {},
+            "type": "PipType",
+            "version": {
+              "type": "EQUAL",
+              "value": "2.2.0"
+            }
+          },
+          {
+            "locations": [],
+            "name": "kombu",
+            "tags": {},
+            "type": "PipType",
+            "version": {
+              "type": "EQUAL",
+              "value": "5.6.2"
+            }
+          },
+          {
+            "locations": [],
+            "name": "packaging",
+            "tags": {},
+            "type": "PipType",
+            "version": {
+              "type": "EQUAL",
+              "value": "26.0"
+            }
+          },
+          {
+            "locations": [],
+            "name": "pyOpenSSL",
+            "tags": {},
+            "type": "PipType",
+            "version": {
+              "type": "EQUAL",
+              "value": "23.3.0"
+            }
+          },
+          {
+            "locations": [],
+            "name": "pycparser",
+            "tags": {},
+            "type": "PipType",
+            "version": {
+              "type": "EQUAL",
+              "value": "3.0"
+            }
+          },
+          {
+            "locations": [],
+            "name": "pygments",
+            "tags": {},
+            "type": "PipType",
+            "version": {
+              "type": "EQUAL",
+              "value": "2.17.2"
+            }
+          },
+          {
+            "locations": [],
+            "name": "pynput",
+            "tags": {},
+            "type": "PipType",
+            "version": {
+              "type": "EQUAL",
+              "value": "1.7.6"
+            }
+          },
+          {
+            "locations": [],
+            "name": "pyobjc-core",
+            "tags": {},
+            "type": "PipType",
+            "version": {
+              "type": "EQUAL",
+              "value": "12.1"
+            }
+          },
+          {
+            "locations": [],
+            "name": "pyobjc-framework-ApplicationServices",
+            "tags": {},
+            "type": "PipType",
+            "version": {
+              "type": "EQUAL",
+              "value": "12.1"
+            }
+          },
+          {
+            "locations": [],
+            "name": "pyobjc-framework-Cocoa",
+            "tags": {},
+            "type": "PipType",
+            "version": {
+              "type": "EQUAL",
+              "value": "12.1"
+            }
+          },
+          {
+            "locations": [],
+            "name": "pyobjc-framework-CoreText",
+            "tags": {},
+            "type": "PipType",
+            "version": {
+              "type": "EQUAL",
+              "value": "12.1"
+            }
+          },
+          {
+            "locations": [],
+            "name": "pyobjc-framework-Quartz",
+            "tags": {},
+            "type": "PipType",
+            "version": {
+              "type": "EQUAL",
+              "value": "12.1"
+            }
+          },
+          {
+            "locations": [],
+            "name": "python-dateutil",
+            "tags": {},
+            "type": "PipType",
+            "version": {
+              "type": "EQUAL",
+              "value": "2.9.0.post0"
+            }
+          },
+          {
+            "locations": [],
+            "name": "requests",
+            "tags": {},
+            "type": "PipType",
+            "version": {
+              "type": "EQUAL",
+              "value": "2.31.0"
+            }
+          },
+          {
+            "locations": [],
+            "name": "six",
+            "tags": {},
+            "type": "PipType",
+            "version": {
+              "type": "EQUAL",
+              "value": "1.17.0"
+            }
+          },
+          {
+            "locations": [],
+            "name": "sqlalchemy",
+            "tags": {},
+            "type": "PipType",
+            "version": {
+              "type": "EQUAL",
+              "value": "2.0.23"
+            }
+          },
+          {
+            "locations": [],
+            "name": "tzdata",
+            "tags": {},
+            "type": "PipType",
+            "version": {
+              "type": "EQUAL",
+              "value": "2025.3"
+            }
+          },
+          {
+            "locations": [],
+            "name": "urllib3",
+            "tags": {},
+            "type": "PipType",
+            "version": {
+              "type": "EQUAL",
+              "value": "2.6.3"
+            }
+          },
+          {
+            "locations": [],
+            "name": "vine",
+            "tags": {},
+            "type": "PipType",
+            "version": {
+              "type": "EQUAL",
+              "value": "5.1.0"
+            }
+          }
+        ],
+        "direct": [
+          2,
+          7,
+          10,
+          17,
+          22,
+          24,
+          25,
+          32,
+          34
+        ]
+      },
+      "path": "/Users/alexchilton/PycharmProjects/security_testing/oss-scan-test/",
+      "type": "setuptools"
+    }
+  ],
+  "sourceUnits": [
+    {
+      "AdditionalDependencyData": null,
+      "Build": {
+        "Artifact": "default",
+        "Dependencies": [],
+        "Imports": [],
+        "Succeeded": true
+      },
+      "Data": null,
+      "Files": null,
+      "GraphBreadth": "partial",
+      "Info": null,
+      "Manifest": "/Users/alexchilton/PycharmProjects/security_testing/oss-scan-test/venv/lib/python3.12/site-packages/ruamel/yaml/clibz/",
+      "Name": "/Users/alexchilton/PycharmProjects/security_testing/oss-scan-test/venv/lib/python3.12/site-packages/ruamel/yaml/clibz/",
+      "NoticeFiles": [],
+      "OriginPaths": [
+        "venv/lib/python3.12/site-packages/ruamel/yaml/clibz/setup.py"
+      ],
+      "Title": null,
+      "Type": "setuptools"
+    },
+    {
+      "AdditionalDependencyData": null,
+      "Build": {
+        "Artifact": "default",
+        "Dependencies": [
+          {
+            "imports": [
+              "pip+MarkupSafe$3.0.3"
+            ],
+            "locator": "pip+Jinja2$3.1.6",
+            "metadata": null
+          },
+          {
+            "imports": [],
+            "locator": "pip+MarkupSafe$3.0.3",
+            "metadata": null
+          },
+          {
+            "imports": [],
+            "locator": "pip+PyMySQL$1.1.0",
+            "metadata": null
+          },
+          {
+            "imports": [],
+            "locator": "pip+Werkzeug$3.1.6",
+            "metadata": null
+          },
+          {
+            "imports": [
+              "pip+vine$5.1.0"
+            ],
+            "locator": "pip+amqp$5.3.1",
+            "metadata": null
+          },
+          {
+            "imports": [],
+            "locator": "pip+billiard$4.2.4",
+            "metadata": null
+          },
+          {
+            "imports": [],
+            "locator": "pip+blinker$1.9.0",
+            "metadata": null
+          },
+          {
+            "imports": [
+              "pip+billiard$4.2.4",
+              "pip+click$8.1.8",
+              "pip+click-didyoumean$0.3.1",
+              "pip+click-plugins$1.1.1.2",
+              "pip+click-repl$0.3.0",
+              "pip+kombu$5.6.2",
+              "pip+python-dateutil$2.9.0.post0",
+              "pip+tzdata$2025.3",
+              "pip+vine$5.1.0"
+            ],
+            "locator": "pip+celery$5.3.4",
+            "metadata": null
+          },
+          {
+            "imports": [],
+            "locator": "pip+certifi$2026.2.25",
+            "metadata": null
+          },
+          {
+            "imports": [
+              "pip+pycparser$3.0"
+            ],
+            "locator": "pip+cffi$2.0.0",
+            "metadata": null
+          },
+          {
+            "imports": [],
+            "locator": "pip+chardet$5.2.0",
+            "metadata": null
+          },
+          {
+            "imports": [],
+            "locator": "pip+charset-normalizer$3.4.5",
+            "metadata": null
+          },
+          {
+            "imports": [],
+            "locator": "pip+click$8.1.8",
+            "metadata": null
+          },
+          {
+            "imports": [
+              "pip+click$8.1.8"
+            ],
+            "locator": "pip+click-didyoumean$0.3.1",
+            "metadata": null
+          },
+          {
+            "imports": [
+              "pip+click$8.1.8"
+            ],
+            "locator": "pip+click-plugins$1.1.1.2",
+            "metadata": null
+          },
+          {
+            "imports": [
+              "pip+click$8.1.8"
+            ],
+            "locator": "pip+click-repl$0.3.0",
+            "metadata": null
+          },
+          {
+            "imports": [
+              "pip+cffi$2.0.0"
+            ],
+            "locator": "pip+cryptography$41.0.7",
+            "metadata": null
+          },
+          {
+            "imports": [
+              "pip+Jinja2$3.1.6",
+              "pip+Werkzeug$3.1.6",
+              "pip+blinker$1.9.0",
+              "pip+click$8.1.8",
+              "pip+itsdangerous$2.2.0"
+            ],
+            "locator": "pip+flask$3.0.0",
+            "metadata": null
+          },
+          {
+            "imports": [],
+            "locator": "pip+idna$3.11",
+            "metadata": null
+          },
+          {
+            "imports": [],
+            "locator": "pip+itsdangerous$2.2.0",
+            "metadata": null
+          },
+          {
+            "imports": [
+              "pip+amqp$5.3.1",
+              "pip+packaging$26.0",
+              "pip+tzdata$2025.3",
+              "pip+vine$5.1.0"
+            ],
+            "locator": "pip+kombu$5.6.2",
+            "metadata": null
+          },
+          {
+            "imports": [],
+            "locator": "pip+packaging$26.0",
+            "metadata": null
+          },
+          {
+            "imports": [
+              "pip+cryptography$41.0.7"
+            ],
+            "locator": "pip+pyOpenSSL$23.3.0",
+            "metadata": null
+          },
+          {
+            "imports": [],
+            "locator": "pip+pycparser$3.0",
+            "metadata": null
+          },
+          {
+            "imports": [],
+            "locator": "pip+pygments$2.17.2",
+            "metadata": null
+          },
+          {
+            "imports": [
+              "pip+pyobjc-framework-ApplicationServices$12.1",
+              "pip+pyobjc-framework-Quartz$12.1",
+              "pip+six$1.17.0"
+            ],
+            "locator": "pip+pynput$1.7.6",
+            "metadata": null
+          },
+          {
+            "imports": [],
+            "locator": "pip+pyobjc-core$12.1",
+            "metadata": null
+          },
+          {
+            "imports": [
+              "pip+pyobjc-core$12.1",
+              "pip+pyobjc-framework-Cocoa$12.1",
+              "pip+pyobjc-framework-CoreText$12.1",
+              "pip+pyobjc-framework-Quartz$12.1"
+            ],
+            "locator": "pip+pyobjc-framework-ApplicationServices$12.1",
+            "metadata": null
+          },
+          {
+            "imports": [
+              "pip+pyobjc-core$12.1"
+            ],
+            "locator": "pip+pyobjc-framework-Cocoa$12.1",
+            "metadata": null
+          },
+          {
+            "imports": [
+              "pip+pyobjc-core$12.1",
+              "pip+pyobjc-framework-Cocoa$12.1",
+              "pip+pyobjc-framework-Quartz$12.1"
+            ],
+            "locator": "pip+pyobjc-framework-CoreText$12.1",
+            "metadata": null
+          },
+          {
+            "imports": [
+              "pip+pyobjc-core$12.1",
+              "pip+pyobjc-framework-Cocoa$12.1"
+            ],
+            "locator": "pip+pyobjc-framework-Quartz$12.1",
+            "metadata": null
+          },
+          {
+            "imports": [
+              "pip+six$1.17.0"
+            ],
+            "locator": "pip+python-dateutil$2.9.0.post0",
+            "metadata": null
+          },
+          {
+            "imports": [
+              "pip+certifi$2026.2.25",
+              "pip+charset-normalizer$3.4.5",
+              "pip+idna$3.11",
+              "pip+urllib3$2.6.3"
+            ],
+            "locator": "pip+requests$2.31.0",
+            "metadata": null
+          },
+          {
+            "imports": [],
+            "locator": "pip+six$1.17.0",
+            "metadata": null
+          },
+          {
+            "imports": [],
+            "locator": "pip+sqlalchemy$2.0.23",
+            "metadata": null
+          },
+          {
+            "imports": [],
+            "locator": "pip+tzdata$2025.3",
+            "metadata": null
+          },
+          {
+            "imports": [],
+            "locator": "pip+urllib3$2.6.3",
+            "metadata": null
+          },
+          {
+            "imports": [],
+            "locator": "pip+vine$5.1.0",
+            "metadata": null
+          }
+        ],
+        "Imports": [
+          "pip+PyMySQL$1.1.0",
+          "pip+celery$5.3.4",
+          "pip+chardet$5.2.0",
+          "pip+flask$3.0.0",
+          "pip+pyOpenSSL$23.3.0",
+          "pip+pygments$2.17.2",
+          "pip+pynput$1.7.6",
+          "pip+requests$2.31.0",
+          "pip+sqlalchemy$2.0.23"
+        ],
+        "Succeeded": true
+      },
+      "Data": null,
+      "Files": null,
+      "GraphBreadth": "partial",
+      "Info": null,
+      "Manifest": "/Users/alexchilton/PycharmProjects/security_testing/oss-scan-test/",
+      "Name": "/Users/alexchilton/PycharmProjects/security_testing/oss-scan-test/",
+      "NoticeFiles": [],
+      "OriginPaths": [
+        "requirements.txt"
+      ],
+      "Title": null,
+      "Type": "setuptools"
+    }
+  ]
+}

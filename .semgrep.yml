@@ -1,0 +1,19 @@
+rules:
+  - id: hardcoded-api-key-or-secret
+    patterns:
+      - pattern-either:
+          - pattern: api_key = "..."
+          - pattern: secret = "..."
+          - pattern: api_key = '...'
+          - pattern: secret = '...'
+    message: >
+      Hardcoded credential detected: variable '$VAR' is assigned a string literal.
+      Hardcoded secrets committed to source control are exposed to anyone with repo
+      access and will appear in git history even after deletion. Rotate immediately
+      and use environment variables or a secrets manager instead.
+    languages: [python]
+    severity: ERROR
+    metadata:
+      category: security
+      cwe: "CWE-798: Use of Hard-coded Credentials"
+      owasp: "A07:2021 - Identification and Authentication Failures"

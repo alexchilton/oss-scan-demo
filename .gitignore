@@ -1,0 +1,8 @@
+venv/
+fossa
+fossa_bin.zip
+fossa_*.zip
+fossa-results.json.raw
+__pycache__/
+*.pyc
+.DS_Store

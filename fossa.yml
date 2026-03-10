@@ -1,0 +1,10 @@
+version: 3
+
+project:
+  id: "custom+1/oss-scan-test"
+  name: "oss-scan-test"
+
+targets:
+  only:
+    - type: pip
+      path: .
